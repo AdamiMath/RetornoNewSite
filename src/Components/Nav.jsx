@@ -4,7 +4,7 @@ import {Button} from '@mui/material'
 const Nav = () => {
   return (
     <nav className='nav'>
-        <div className='divLogo'>Logo</div>
+        <a className='divLogo'><img className='logoRetorno' src="/assets/logo.png" alt="logo da retorno" /></a>
         <div className='ContainerMenuSocial'>
             <div className='divMenu'>
                 <ul className='ulMenu'>

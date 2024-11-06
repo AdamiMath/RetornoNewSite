@@ -11,8 +11,11 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    margin: 0 auto;
     font-weight: 600;
     color: #fff;
+    width: 1080px;
+   
 }
 
 /* style of menus */
@@ -26,11 +29,16 @@ li{
     margin: 5px 5px;
     padding: 0px 5px;
 }
+
+.ulMenu{
+    display: flex;
+    flex-wrap: nowrap;
+}
 /* container Social Media */
 
 .ContainerMenuSocial{
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 
@@ -47,6 +55,10 @@ li{
 
 }
 
+.logoRetorno{
+    max-width: 50%;
+}
+
 /* header */
 
 .header {
@@ -55,6 +67,7 @@ li{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    padding-bottom: 25px;
 }
 .h1-header{
     color: #fff;
@@ -67,10 +80,12 @@ li{
 
 .HeaderContainer{
     display: flex;
-    margin: 50px auto;
+    margin: 50px auto 0px auto;
     align-items: center;
     justify-content: space-around;
     place-items: center;
+    width: 1080px;
+
 
 }
 
@@ -78,12 +93,9 @@ li{
     max-width: 500px;
     text-align: justify;
     align-items: center;
-    margin-left: 100px;
-    
 }
 
 .img-avatar{
-
     width: 60%;
     margin: 0 auto;
 }
@@ -93,3 +105,143 @@ a{
     color: #fff;
     font-weight: 700;
 }
+
+/* Contact us */
+.span{
+   display: inline-block;
+   margin-top: 15px;
+
+   
+}
+
+/* Services */
+.containerServicos{
+    background-color: #151515;
+    display: flex;
+    flex-wrap: wrap;
+    width: 1080px;
+    border-radius: 25px;
+    text-align: center;
+    margin: 20px auto 0px auto;
+    padding: 10px 10px;
+}
+
+.h3{
+    font-weight: 700;
+    font-size: 35px;
+    text-align: center;
+    justify-content: center;
+    margin: 10px auto;
+    color: #fff;
+}
+
+/* Slide */
+
+.containerImgSlide{
+    width: 1080px;
+}
+
+.slide{
+    display: flex;
+    justify-content: center;
+    width: 1080px;
+    margin: 80px auto 50px auto;
+}
+
+.labelImage{
+    color: #fff;
+    margin: 5px auto;
+}
+
+.imageUl{
+    padding: 0px 40px;
+}
+
+.indicatorContainer {
+    display: flex;
+    justify-content: center;
+    margin: 10px auto;
+    flex-wrap: nowrap;
+    align-items: center;
+
+}
+
+.indicatorDot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: lightgray;
+    margin: 0 5px;
+    transition: background-color 0.3s ease;
+}
+
+.indicatorDot.active {
+    background-color: #9be240; 
+
+}
+
+
+/* controller */
+
+.setadireita, .setaesquerda{
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    align-self: center;
+}
+
+/* Body Customers slide */
+.containerBody{
+    background-color: #151515;
+    color: #fff;
+}
+
+.h3Cliente{
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    padding-top: 50px;
+}
+
+.p-clientes{
+    width: 1000px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* Controllers Customers */
+
+.Controllers{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+.Controllers > button{
+    width: 250px;
+    height: 50px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    border: solid 2px #fff;
+}
+
+.controllerlogo{
+    background: none;
+}
+
+.prev{
+    border-radius:25px 0px 0px 25px ;
+    cursor: pointer;
+    background: linear-gradient(90deg, #4b1959, #b22dd8);
+}
+
+.next{
+    border-radius:0px 25px 25px 0px ;
+    cursor: pointer;
+    background: linear-gradient(90deg, #4b1959, #b22dd8);
+}
+

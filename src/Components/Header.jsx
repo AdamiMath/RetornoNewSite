@@ -1,5 +1,6 @@
 import React from 'react'
 import Nav from './Nav'
+import Servicos from './Servicos'
 
 const Header = () => {
   return (
@@ -15,12 +16,16 @@ const Header = () => {
                     criação de sites, vamos além do ordinário para transformar cada campanha em uma
                     jornada intergaláctica de resultados.
                 </p>
-                <a href=""><span>Entre em Contato</span></a>
+                <a href=""><span className='span'>Entre em Contato</span></a>
+                
             </div>
             <div className='imgs-header'>
                 <img className='img-avatar' src="/assets/avatar.png" alt="avatar do logo" />
             </div>
         </div>
+        <Servicos />
+        
+
     </div>
   )
 }
