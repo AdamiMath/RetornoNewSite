@@ -1,5 +1,8 @@
 import React from 'react'
 import SlideClientes from './SlideClientes'
+import FormContainer from './FormContainer'
+import SobreNos from './SobreNos'
+import Footer from './Footer'
 
 const Body = () => {
   return (
@@ -14,6 +17,11 @@ const Body = () => {
         </p>
         <div className='containerSlideClientes'>
             <SlideClientes />
+        </div>
+        <div className='containerForm'>
+            <FormContainer />
+            <SobreNos />
+            <Footer />
         </div>
     </div>
   )

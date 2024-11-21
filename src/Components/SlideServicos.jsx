@@ -1,82 +1,67 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+function SampleNextArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block" }}
+      onClick={onClick}
+    />
+  );
+}
+
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block" }}
+      onClick={onClick}
+    />
+  );
+}
 
 const SlideServicos = () => {
-    const [startIndex, setStartIndex] = useState(0);
-    const [progress, setProgress] = useState(0);
-    const slideInterval = 3000;
+  const settings = {
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    dots: true,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
+  };
 
-    const images = [
-        { src: '/assets/gestao.png', name: 'Gestão de Redes Sociais' },
-        { src: '/assets/trafego.png', name: 'Tráfego Pago' },
-        { src: '/assets/lojavirtual.png', name: 'Loja Virtual'},
-        { src: '/assets/branding.png', name: 'Branding' },
-        { src: '/assets/landing.png', name: 'Landing Page' },
-        { src: '/assets/intitucionais.png', name: 'Sites Institucionais'},
-        { src: '/assets/filmagens.png', name: 'Filmagens Locais' },
-        { src: '/assets/consultoria.png', name: 'Consultorias' },
-    ];
+  const images = [
+    { src: '/assets/gestao.png', name: 'Gestão de Redes Sociais' },
+    { src: '/assets/trafego.png', name: 'Tráfego Pago' },
+    { src: '/assets/lojavirtual.png', name: 'Loja Virtual' },
+    { src: '/assets/branding.png', name: 'Branding' },
+    { src: '/assets/landing.png', name: 'Landing Page' },
+    { src: '/assets/intitucionais.png', name: 'Sites Institucionais' },
+    { src: '/assets/filmagens.png', name: 'Filmagens Locais' },
+    { src: '/assets/consultoria.png', name: 'Consultorias' },
+  ];
 
-    // Obter as três imagens visíveis
-    const visibleImages = [
-        images[startIndex],
-        images[(startIndex + 1) % images.length],
-        images[(startIndex + 2) % images.length],
-    ];
-
-    const nextItem = () => {
-        setStartIndex((prevIndex) => (prevIndex + 1) % images.length);
-        setProgress(0);
-    };
-
-    const prevItem = () => {
-        setStartIndex((prevIndex) => (prevIndex === 0 ? images.length - 1 : (prevIndex - 1) % images.length));
-        setProgress(0);
-    };
-
-    useEffect(() => {
-        const progressInterval = setInterval(() => {
-            setProgress((oldProgress) => {
-                if (oldProgress >= 100) {
-                    nextItem();
-                    return 0;
-                }
-                return oldProgress + (100 / (slideInterval / 100));
-            });
-        }, 100);
-
-        return () => clearInterval(progressInterval);
-    }, [startIndex]);
-
-    return (
-        <>
-            <div className='slide'>
-                <img className='setaesquerda' onClick={prevItem} src="/assets/flechaesquerda.png" alt="Flecha para a esquerda" />
-                <div className='containerImgSlide'>
-                    <ul className='slideUl'>
-                        {visibleImages.map((img, index) => (
-                            <li className='imageUl' key={index}>
-                                <img
-                                    src={img.src}
-                                    alt={`Slide ${index}`}
-                                    className={index === 0 ? 'first' : ''}
-                                />
-                                <p className='labelImage'>{img.name}</p>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-                <img className='setadireita' onClick={nextItem} src="/assets/flechadireita.png" alt="Flecha para a Direita" />
+  return (
+    <div className="slider-container">
+      <Slider {...settings}>
+        {images.map((img, index) => (
+          <div key={index}>
+            <div className='containerServicoItem'>
+              <img src={img.src} alt={img.name} className="logoSlide" />
+              <p className="labelImage">{img.name}</p>
             </div>
-            <div className="indicatorContainer">
-                {images.map((_, index) => (
-                    <div
-                        key={index}
-                        className={`indicatorDot ${index === startIndex ? 'active' : ''}`}
-                    />
-                ))}
-            </div>
-        </>
-    );
+          </div>
+        ))}
+      </Slider>
+    </div>
+  );
 };
 
 export default SlideServicos;
