@@ -254,19 +254,38 @@ a{
 }
 
 .bgBox {
+    position: relative; 
     background-image: url('/assets/bgbox.png');
     background-size: cover;
     background-repeat: no-repeat;
-    width: 260px; 
+    max-width: 260px; 
+    height: 200px; 
     padding: 10px;
     margin: 15px; 
+    overflow: hidden; 
 }
 
+.bgBox::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(164, 19, 231, 0.7); /* Cor semitransparente */
+    opacity: 0; /* Inicialmente invisível */
+    transition: opacity 0.3s ease-in-out; /* Suavidade na transição */
+}
+
+.bgBox:hover::after {
+    opacity: 1; 
+    cursor: pointer;
+}
 
 
 .logoCustomers{
     width: 200px;
-    height: 200px;
+    height: 180px;
     margin: 0 auto;
     
 }
@@ -332,11 +351,16 @@ input::placeholder{
     height: 150px;
 }
 
-/* about us */
+/* Subido */
 
-.containerSobreNos{
+.containerSubido{
+    background-color: rgba(0, 0, 0, 0.6);
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    border-radius: 10px;
+    margin: 0 auto;
 }
 
 .h3sobrenos{
@@ -368,3 +392,55 @@ input::placeholder{
     width: 50px;
     height: 50px;
 }
+
+/* testes arrows */
+
+.custom-arrows-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    position: relative;
+  }
+  
+  .prev{
+    background: linear-gradient(90deg, #6a1b9a, #9c27b0);
+    border: 2px solid white;
+    color: white;
+    width: 320px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 999px 0px 0px 999px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+   .next{
+    background: linear-gradient(90deg, #6a1b9a, #9c27b0);
+    border: 2px solid white;
+    color: white;
+    width: 320px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 0px 999px 999px 0px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .arrow-button:hover {
+    background: #7b1fa2;
+  }
+  
+  .arrow-icon {
+    width: 200px;
+    height: 40px;
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .icone-centro{
+    max-width: 65px;
+    
+  }

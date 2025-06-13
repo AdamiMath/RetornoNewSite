@@ -1,7 +1,7 @@
 import React from 'react'
 import SlideClientes from './SlideClientes'
 import FormContainer from './FormContainer'
-import SobreNos from './SobreNos'
+import Subido from './Subido'
 import Footer from './Footer'
 
 const Body = () => {
@@ -20,7 +20,7 @@ const Body = () => {
         </div>
         <div className='containerForm'>
             <FormContainer />
-            <SobreNos />
+            <Subido />
             <Footer />
         </div>
     </div>
