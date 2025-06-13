@@ -363,10 +363,17 @@ input::placeholder{
     margin: 0 auto;
 }
 
-.h3sobrenos{
+.h3subido{
     color: #fff;
     font-weight: bold;
     font-size: 30px;
+}
+
+.p-subido{
+    color: #fff;
+    width: 750px;
+    text-align: justify;
+    text-indent: 30px;
 }
 
 /* Footer */
@@ -375,9 +382,10 @@ input::placeholder{
    display: flex;
    justify-content: space-between;
    align-items: center;
+   padding: 10px 0px;
    align-self: center;
    margin: 0 auto;
-    width: 1080px;
+   max-width: 980px;
 }
 
 .endereco{
