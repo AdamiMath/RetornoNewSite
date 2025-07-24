@@ -1,0 +1,492 @@
+/* general*/
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* style of navegation */
+
+.nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    font-weight: 600;
+    color: #fff;
+    width: 1080px;
+   
+}
+
+/* style of menus */
+
+ul{
+    list-style: none;
+}
+
+li{
+    display: inline-block;
+    margin: 5px 5px;
+    padding: 0px 5px;
+}
+
+.ulMenu{
+    display: flex;
+    flex-wrap: nowrap;
+}
+/* container Social Media */
+
+.ContainerMenuSocial{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+
+/* style of social media icones */
+.socialMediaDiv{
+    display: flex;
+    align-items: center;
+    padding: 0px 5px;
+}
+.SocialLogo{
+    width: 30px;
+    height: 30px;
+    margin: 5px 5px;
+
+}
+
+.logoRetorno{
+    max-width: 50%;
+}
+
+/* header */
+
+.header {
+    /* height: 50vh;  */
+    background-image: url('/assets/bg-header.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-bottom: 25px;
+}
+.h1-header{
+    color: #fff;
+    font-weight: 700;
+}
+
+.p-padrao{
+    color: #fff;
+}
+
+.HeaderContainer{
+    display: flex;
+    margin: 50px auto 0px auto;
+    align-items: center;
+    justify-content: space-around;
+    place-items: center;
+    width: 1080px;
+
+
+}
+
+.text-header{
+    max-width: 500px;
+    text-align: justify;
+    align-items: center;
+}
+
+.img-avatar{
+    width: 60%;
+    margin: 0 auto;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+}
+
+/* Contact us */
+.span{
+   display: inline-block;
+   margin-top: 15px;
+
+   
+}
+
+/* Services */
+.containerServicos{
+    background-color: #151515;
+    display: flex;
+    flex-wrap: wrap;
+    width: 1080px;
+    border-radius: 25px;
+    text-align: center;
+    margin: 20px auto 0px auto;
+    padding: 10px 10px;
+}
+
+.containerServicoItem{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.slick-slider{
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+.logoSlide{
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.slick-prev {
+    left: -20px;
+}
+
+.slick-next {
+    right: -20px;
+}
+
+.h3{
+    font-weight: 700;
+    font-size: 35px;
+    text-align: center;
+    justify-content: center;
+    margin: 10px auto;
+    color: #fff;
+}
+
+/* Slide */
+
+.containerImgSlide{
+    width: 1080px;
+}
+
+.slide{
+    display: flex;
+    justify-content: center;
+    width: 1080px;
+    margin: 80px auto 50px auto;
+}
+
+.labelImage{
+    color: #fff;
+    margin: 5px auto;
+}
+
+.imageUl{
+    padding: 0px 40px;
+}
+
+.indicatorContainer {
+    display: flex;
+    justify-content: center;
+    margin: 10px auto;
+    flex-wrap: nowrap;
+    align-items: center;
+
+}
+
+.indicatorDot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: lightgray;
+    margin: 0 5px;
+    transition: background-color 0.3s ease;
+}
+
+.indicatorDot.active {
+    background-color: #9be240; 
+
+}
+
+/* controller */
+
+.setadireita, .setaesquerda{
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    align-self: center;
+}
+/* container Body */
+
+.containerBody{
+    background-color: #151515;
+}
+
+.slick-dots > li > button::before{
+    color: #9be240  !important;
+}
+
+.p-clientes{
+    color: #fff;
+    width: 1000px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.h3Cliente{
+    color: #fff;
+    text-align: center;
+    padding: 10px 0px;
+    font-size: 25px;
+}
+
+/* configuration react-slick */
+
+.slider-container {
+    width: 1080px;
+    margin: 50px auto;
+    padding: 0 15px; /* Espaço ao redor do slider */
+}
+.slick-prev:before, .slick-next:before{
+    color: #9be240;
+}
+
+.slick-track{
+    padding: 0 15px;
+}
+.slick-list{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.slideboxclientes{
+    padding: 0px;
+    margin-left: 20px;
+
+
+}
+
+.ContainerClientes{
+    width: 1080px;
+    margin: 0px auto;
+    justify-content: center;
+  
+}
+
+.bgBox {
+    position: relative; 
+    background-image: url('/assets/bgbox.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-width: 260px; 
+    height: 200px; 
+    padding: 10px 0px;
+    margin: 15px 0px; 
+    overflow: hidden; 
+}
+
+.bgBox::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(164, 19, 231, 0.7); /* Cor semitransparente */
+    opacity: 0; /* Inicialmente invisível */
+    transition: opacity 0.3s ease-in-out; /* Suavidade na transição */
+}
+
+.bgBox:hover::after {
+    opacity: 1; 
+    cursor: pointer;
+}
+
+
+.logoCustomers{
+    width: 200px;
+    height: 180px;
+    margin: 0 auto;
+    
+}
+
+/* Form Section */
+
+.ContainerForm{
+    display: grid;
+    max-width: 1080px;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 auto;
+}
+
+.containerForm{
+    background-image: url('/assets/bgbox.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.formimage{
+    width: 450px;
+    height: 450px;
+
+    margin-top: 100px;
+}
+
+.h3-contato{
+    margin: 100px auto 10px auto;
+    font-size: 30px;
+    margin-left: 110px;
+    color: #fff;
+}
+
+form{
+    margin-left: 100px;
+}
+
+.buttonEnviar{
+    margin-left: 110px;
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+    background-color: #e2e2e2;
+}
+
+input{
+    width: 248px;
+    height: 50px;
+    background: none;
+    font-weight: 700;
+    margin: 10px 10px;
+    border: solid 1px #fff;
+    border-radius: 10px;
+    color: #fff;
+    
+}
+
+input::placeholder{
+    color: #fff;
+    font-size: 14px;
+    padding-left: 10px;
+    
+}
+
+.inputText{
+    width: 530px;
+    height: 150px;
+}
+
+/* Subido */
+
+.containerSubido{
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1080px;
+    border-radius: 10px;
+    margin: 15px auto;
+}
+
+.h3subido::before {
+  content: "";
+  display: inline-block;
+  background-image: url('/public/assets/subidologo.png'); /* substitua com o caminho correto */
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 80px; /* ajuste conforme necessário */
+  height: 80px; /* ajuste conforme necessário */
+  margin-right: 10px; /* espaço entre a imagem e o texto */
+  vertical-align: middle;
+}
+
+.h3subido{
+    color: #fff;
+    font-weight: 400;
+    font-size: 42px;
+
+}
+
+.p-subido{
+    color: #fff;
+    width: 750px;
+    text-align: justify;
+    text-indent: 30px;
+    padding: 15px 0px;
+}
+
+/* Footer */
+
+.containerFooter{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 10px 0px;
+   align-self: center;
+   margin: 0 auto;
+   max-width: 1080px;
+}
+
+.endereco{
+    color: #fff;
+}
+
+.sociais-footer{
+    display: flex;
+}
+
+.logo-footer{
+    margin-right: 100px;
+    text-align: center;
+
+}
+
+/* testes arrows */
+
+.custom-arrows-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    position: relative;
+  }
+  
+  .prev{
+    background: linear-gradient(90deg, #6a1b9a, #9c27b0);
+    border: 2px solid white;
+    color: white;
+    width: 320px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 999px 0px 0px 999px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+   .next{
+    background: linear-gradient(90deg, #6a1b9a, #9c27b0);
+    border: 2px solid white;
+    color: white;
+    width: 320px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 0px 999px 999px 0px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .arrow-button:hover {
+    background: #7b1fa2;
+  }
+  
+  .arrow-icon {
+    width: 200px;
+    height: 40px;
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .icone-centro{
+    max-width: 65px;
+    
+  }
