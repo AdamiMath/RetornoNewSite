@@ -40,10 +40,27 @@ const SlideClientes = () => {
     autoplaySpeed: 2000,
     cssEase: "linear",
     arrows: false, // Desativa as setas padrão
+      responsive: [
+    {
+      breakpoint: 530, // tablets
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 768, // celulares
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        initialSlide: 0,
+      },
+    },
+  ],
   };
 
     return (
-      <div className="slider-container slideboxclientes">
+      <div id='clientes' className="slider-container slideboxclientes">
         <CustomArrows
         onPrev={() => slideRef.current.slickPrev()}
         onNext={() => slideRef.current.slickNext()}

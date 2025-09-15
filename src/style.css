@@ -5,6 +5,10 @@
     padding: 0px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* style of navegation */
 
 .nav{
@@ -33,12 +37,16 @@ li{
 .ulMenu{
     display: flex;
     flex-wrap: nowrap;
+    justify-items: center;
+    align-items: center;
+    align-self: center;
 }
 /* container Social Media */
 
 .ContainerMenuSocial{
     display: flex;
     flex-wrap: nowrap;
+    align-items: center;
 }
 
 
@@ -70,8 +78,9 @@ li{
     padding-bottom: 25px;
 }
 .h1-header{
-    color: #fff;
+    color: #9be240;
     font-weight: 700;
+    font-size: 43px;
 }
 
 .p-padrao{
@@ -84,7 +93,7 @@ li{
     align-items: center;
     justify-content: space-around;
     place-items: center;
-    width: 1080px;
+    max-width: 1080px;
 
 
 }
@@ -110,8 +119,21 @@ a{
 .span{
    display: inline-block;
    margin-top: 15px;
+   padding: 0px 10px;
+   border: solid 1px #fff;
+   border-radius: 10px;
+}
 
-   
+.span::after {
+   content: "";
+   display: inline-block;
+   width: 50px;
+   height: 50px;
+   margin-left: 5px;
+   background-image: url('/public/assets/wpp.png'); /* substitua pelo caminho da sua imagem */
+   background-size: contain;
+   background-repeat: no-repeat;
+   vertical-align: middle;
 }
 
 /* Services */
@@ -146,11 +168,11 @@ a{
 }
 
 .slick-prev {
-    left: -20px;
+    left: 0px;
 }
 
 .slick-next {
-    right: -20px;
+    right: 0px;
 }
 
 .h3{
@@ -159,7 +181,7 @@ a{
     text-align: center;
     justify-content: center;
     margin: 10px auto;
-    color: #fff;
+    color: #9be240;
 }
 
 /* Slide */
@@ -227,16 +249,17 @@ a{
 
 .p-clientes{
     color: #fff;
-    width: 1000px;
+    max-width: 1000px;
     text-align: center;
     margin: 0 auto;
 }
 
 .h3Cliente{
-    color: #fff;
+    color: #9be240;
     text-align: center;
     padding: 10px 0px;
-    font-size: 25px;
+    font-weight: 700;
+    font-size: 35px;
 }
 
 /* configuration react-slick */
@@ -266,7 +289,7 @@ a{
 }
 
 .ContainerClientes{
-    width: 1080px;
+    max-width: 1080px;
     margin: 0px auto;
     justify-content: center;
   
@@ -303,9 +326,9 @@ a{
 
 
 .logoCustomers{
-    width: 200px;
-    height: 180px;
-    margin: 0 auto;
+    width: 350px;
+    height: 350px;
+    margin: -60px -45px;
     
 }
 
@@ -313,9 +336,10 @@ a{
 
 .ContainerForm{
     display: grid;
-    max-width: 1080px;
+    max-width: 980px;
     grid-template-columns: repeat(2, 1fr);
     margin: 0 auto;
+    justify-content: center;
 }
 
 .containerForm{
@@ -333,21 +357,31 @@ a{
 
 .h3-contato{
     margin: 100px auto 10px auto;
-    font-size: 30px;
+    font-weight: 700;
+    font-size: 35px;
     margin-left: 110px;
-    color: #fff;
+    color: #9be240;
 }
 
 form{
     margin-left: 100px;
 }
 
+textarea {
+  vertical-align: top;   
+  padding: 10px;         
+  resize: none;          
+}
+
 .buttonEnviar{
-    margin-left: 110px;
+   
+    margin-top: 20px;
     width: 100px;
     height: 40px;
     cursor: pointer;
-    background-color: #e2e2e2;
+    font-weight: bold;
+    color: #000;
+    background-color: #9be240;
 }
 
 input{
@@ -355,7 +389,7 @@ input{
     height: 50px;
     background: none;
     font-weight: 700;
-    margin: 10px 10px;
+    margin: 12px 10px;
     border: solid 1px #fff;
     border-radius: 10px;
     color: #fff;
@@ -370,8 +404,44 @@ input::placeholder{
 }
 
 .inputText{
-    width: 530px;
+    width: 520px;
     height: 150px;
+    background-color: transparent;
+    color: #fff;
+     border: solid 1px #fff;
+}
+
+.row {
+  display: flex;
+  gap: 20px; /* espaço entre os campos */
+  margin-bottom: 16px;
+}
+
+.field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.full {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.error {
+  font-size: 12px;
+  color: white;
+  margin-top: 4px;
+  position: relative; /* agora fica embaixo sem deslocar nada */
+}
+
+
+.inputText::placeholder{
+    color: #fff;
+    font-size: 14px;
+    padding-left: 10px;
+    
 }
 
 /* Subido */
@@ -382,7 +452,8 @@ input::placeholder{
     justify-content: center;
     flex-wrap: wrap;
     max-width: 1080px;
-    border-radius: 10px;
+
+    border-radius: 50px;
     margin: 15px auto;
 }
 
@@ -446,6 +517,7 @@ input::placeholder{
     justify-content: center;
     align-items: center;
     margin-top: 20px;
+    margin-right: 20px;
     position: relative;
   }
   
@@ -490,3 +562,476 @@ input::placeholder{
     max-width: 65px;
     
   }
+
+  .whatsapp-button {
+  display: none;
+  transform: translateX(100vw); /* Inicia fora da tela à direita */
+  transition: transform 0.7s ease-out; /* Transição para a animação de deslizar */
+}
+
+  /* ==========================
+   MOBILE / RESPONSIVE
+=========================== */
+
+/* Tablets e telas médias */
+@media (max-width: 1135px) {
+
+ 
+
+    .h1-header {
+        font-size: 36px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .h3, .h3Cliente, .h3-contato, .h3subido {
+        font-size: 28px;
+    }
+
+    .text-header {
+        max-width: 90%;
+        text-align: center;
+    }
+
+    .img-avatar {
+        display: flex;
+        text-align: center;
+        margin: 0 auto;
+        width: 30%;
+    }
+
+    input, .inputText, textarea {
+    max-width: 100%;    
+
+}
+
+    .imageForm, .formimage {
+        display: none;
+    }
+
+    .row {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .slide, .containerImgSlide {
+        width: 100%;
+    }
+
+    .slideboxclientes, .logoCustomers {
+        margin-left: 0px;
+    }
+
+    .slider-container,
+    .slide,
+    .containerImgSlide {
+        width: 95%;       /* ocupa quase toda a tela */
+        max-width: 1080px; /* mantém proporção */
+        margin: 0 auto;   /* centraliza */
+    }
+
+    .slick-slider {
+        max-width: 100%; /* slider interno também responsivo */
+    }
+
+    .logoSlide {
+        width: 120px;    /* reduz tamanho do logo para caber */
+        height: 120px;
+    }
+
+    .indicatorContainer {
+        flex-wrap: wrap; /* evita que indicadores saiam da tela */
+    }
+
+    .bgBox {
+        max-width: 200px;
+        height: 150px;
+    }
+
+    .buttonEnviar {
+        width: 100%;
+        height: 45px;
+    }
+
+      .containerServicos{
+        width: 700px;
+    }
+    .ContainerMenuSocial{
+        flex-wrap: wrap;
+    }
+    .nav{
+        flex-wrap: wrap;
+        max-width: 750px;
+    }
+
+    .divLogo{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .HeaderContainer{
+        justify-content: center;
+    }
+
+     .span{
+        text-align: center;
+        justify-content: center;
+    }
+    .logoCustomers{
+        margin: -60px -50px;
+        max-width: 300px;
+        height: 300px;
+    }
+
+    .ContainerForm{
+        display: flex;
+        justify-content: center;
+    }
+
+    .containerForm{
+        margin-top: 50px;
+    }
+
+    form{
+        margin: 0px;
+    }
+
+    .h3-contato{
+        text-align: center;
+        margin: 50px auto;
+    }
+
+    .HeaderContainer{
+        flex-wrap: wrap;
+    }
+
+    
+
+}
+
+/* Tablets pequenos e mobile grande */
+@media (max-width: 768px) {
+
+    
+
+    .p-padrao{
+        font-size: 14px;
+    }
+    .nav {
+        flex-direction: column;
+        gap: 10px;
+        font-size: 14px;
+        width: 450px;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .HeaderContainer {
+        flex-direction: column;
+        margin: 20px auto;
+    }
+
+    .text-header {
+        max-width: 95%;
+        text-align: center;
+    }
+
+    .img-avatar {
+        width: 30%;
+        margin: 20px auto;
+    }
+
+    .h1-header {
+        font-size: 30px;
+    }
+
+    .h3, .h3Cliente, .h3-contato, .h3subido {
+        font-size: 20px;
+    }
+
+    .ContainerForm {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .formimage {
+        width: 250px;
+        height: 250px;
+        margin-top: 30px;
+    }
+
+    .slide, .containerImgSlide {
+        width: 100%;
+        margin: 50px auto 30px auto;
+    }
+
+    .logoCustomers {
+        width: 180px;
+        height: 180px;
+        margin: 0 auto;
+    }
+
+    .bgBox {
+        max-width: 180px;
+        height: 130px;
+    }
+
+    input, .inputText, textarea {
+                width: 85%;
+    }
+
+    .inputText{
+        margin-left: 15px;
+    }
+
+    .buttonEnviar {
+        width: 90%;
+        height: 40px;
+        text-align: center;
+        margin-left: 10px;
+    }
+
+    .ContainerClientes{
+    max-width: 1035px;
+    margin: 0px auto;
+    justify-content: center;
+  
+}
+    .containerServicos{
+       max-width: 450px;
+       height: 550px;
+       max-width: 430px;
+    }
+    .socialMediaDiv{
+        display: none;
+    }
+    
+
+    li {
+    display: inline-block;
+    margin: 5px 0px;
+    padding: 0px 5px
+    }
+
+    .slick-slider {
+             max-width: 100%;
+        }
+    .slick-list{
+        margin-left: 0px;
+    }
+    .containerSubido{
+        max-width: 750px;
+        margin: 30px 10px;
+        height: 300px;
+    }
+
+    .p-subido{
+      max-width: 400px;  
+    }
+
+    .h3subido::before{
+        margin-right: 0px;
+    }
+
+    .containerFooter{
+        display: block;
+        text-align: center;
+    }
+
+    .logo-footer {
+    margin-right: 0px;
+    text-align: center;
+}
+
+.sociais-footer{
+    display: block;
+}
+
+.containerServicoItem {
+    margin-right: 45px;
+}
+
+ .whatsapp-button {
+    display: block; /* Exibe o botão */
+    position: fixed; /* O mantém flutuando */
+    bottom: 20px; /* Movido um pouco mais para cima (valor original era 20px) */
+    right: 20px; /* Movido um pouco mais para a esquerda (valor original era 20px) */
+    z-index: 1000; /* Garante que ele fique sobre outros elementos */
+    background-color: transparent; /* Remove o fundo, a imagem preencherá */
+    border-radius: 50%; /* Faz com que seja redondo */
+    padding: 0; /* Remove padding para a imagem preencher */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
+    width: 100px; /* Define um tamanho fixo para o botão */
+    height: 100px; /* Define um tamanho fixo para o botão */
+    overflow: hidden; /* Garante que a imagem não saia dos limites */
+
+    /* Animação de entrada: desliza para a esquerda */
+    transform: translateX(0); /* Posição final (visível) */
+  }
+
+  .whatsapp-button:hover {
+    transform: scale(1.05) translateX(0); /* Efeito de zoom suave ao passar o mouse */
+  }
+
+  .whatsapp-icon {
+    width: 100%; /* Faz a imagem preencher 100% da largura do botão */
+    height: 100%; /* Faz a imagem preencher 100% da altura do botão */
+    object-fit: contain; /* Garante que a imagem seja contida dentro do espaço, mantendo proporções */
+    display: block; /* Remove espaços extras se for inline */
+    animation: pulse 2s infinite; /* Adiciona a animação de "pulsação" */
+  }
+}
+
+/* Animação para o ícone (mantida) */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+
+/* Mobile médio (iPhone X, etc) */
+@media (max-width: 480px) {
+
+    .nav {
+        font-size: 12px;
+        max-width: 350px;
+    }
+
+    .h1-header {
+        font-size: 24px;
+    }
+
+    .h3, .h3Cliente, .h3-contato {
+        font-size: 20px;
+    }
+
+    .text-header {
+        max-width: 90%;
+    }
+
+    .img-avatar {
+        width: 80%;
+    }
+
+    .ContainerForm {
+        grid-template-columns: 1fr;
+        padding: 0 10px;
+    }
+
+    .formimage {
+        width: 200px;
+        height: 200px;
+        margin-top: 20px;
+    }
+
+    .slide, .containerImgSlide {
+        width: 100%;
+        margin: 30px auto 20px auto;
+    }
+
+    .logoCustomers {
+        width: 150px;
+        height: 150px;
+    }
+
+    .bgBox {
+        max-width: 150px;
+        height: 110px;
+    }
+
+    input, .inputText, textarea {
+        width: 90%;
+    }
+
+    .buttonEnviar {
+        width: 100%;
+        height: 35px;
+        margin-left: 0px;
+    }
+
+    .containerServicos{
+        max-width: 300px;
+    }
+
+    .containerFooter {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .containerServicos{
+        height: 550px;
+    }
+
+    .p-subido{
+        font-size: 15px;
+        max-width: 300px;
+        margin: 0 auto;
+        justify-content: center;
+    }
+
+    .containerSubido{
+        height: 350px;
+    }
+
+    .custom-arrows-wrapper{
+        margin-right: 0px;
+    }
+
+    .inputText{
+        margin-left: 10px;
+    }
+
+}
+
+/* Mobile pequeno (iPhone SE, etc) */
+@media (max-width: 375px) {
+
+    .h1-header {
+        font-size: 20px;
+    }
+
+    .h3, .h3Cliente, .h3-contato, .h3subido {
+        font-size: 18px;
+    }
+
+    .img-avatar {
+        width: 90%;
+    }
+
+    .text-header {
+        font-size: 14px;
+    }
+
+    .formimage {
+        width: 180px;
+        height: 180px;
+    }
+
+    .bgBox {
+        max-width: 130px;
+        height: 100px;
+    }
+
+    .logoCustomers {
+        width: 120px;
+        height: 120px;
+    }
+
+    .buttonEnviar {
+        width: 100%;
+        height: 30px;
+        font-size: 14px;
+    }
+
+}
